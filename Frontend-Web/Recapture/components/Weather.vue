@@ -1,5 +1,5 @@
 <template>
-    <div class="weather-container ms-3 mt-3">
+    <div class="weather-container ms-4 mt-3">
       <img class="weather-icon" draggable="false" :src="weatherIconUrl" alt="Weather Icon" />
       <div class="weather-info">
         <p style="font-weight: bold">Davis, CA</p>
@@ -53,7 +53,7 @@
 <style scoped>
 p {
     margin-bottom: 0px;
-    font-size: 14px;
+    font-size: 15px;
 }
 .weather-container {
     display: flex; /* Use flex layout */
@@ -61,7 +61,7 @@ p {
     align-items: center; /* Vertically center items */
     background-color: rgb(253, 253, 253);
     border-radius: 25px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add a drop shadow */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Add a drop shadow */
   }
   
   .weather-icon {

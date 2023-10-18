@@ -1,7 +1,7 @@
 <template>
     <div class="clock">
-        <h1 class="inline" style="font-size: 95px; color: #e0218a;">{{ this.welcomePhrase }}<h1 class="inline" style="font-size: 100px; color: #242424"> Hannah</h1></h1>
-        <h1 class="mt-4" style="font-size: 85px; color: #444444; margin-bottom: 0px;">{{ currentTime }}</h1>
+        <h1 class="inline" style="font-size: 100px; color: #e0218a;">{{ this.welcomePhrase }}<h1 class="inline" style="font-size: 100px; color: #242424"> Hannah</h1></h1>
+        <h1 class="mt-4" style="font-size: 75px; color: #444444; margin-bottom: 0px;">{{ currentTime }}</h1>
         <h5 style="color: grey">{{ currentDate }}</h5>
     </div>
   </template>
@@ -32,12 +32,12 @@
         this.currentTime = new Date().toLocaleTimeString([], { hour12: false });
       },
       getWelcomePhrase() {
-        this.welcomePhraseDict = ['Hello', 'Hi', 'Welcome', 'Howdy', 'Hey', 'Hiya', '안녕']
+        this.welcomePhraseDict = ['Hello', 'Hi', 'Welcome', 'Hey', 'Hiya', '안녕']
         const randomIndex = Math.floor(Math.random() * this.welcomePhraseDict.length);
         this.welcomePhrase = this.welcomePhraseDict[randomIndex]
       },
       setPageTitle() {
-        document.title = "Dashboard"
+        document.title = "Today 🌷"
       }
     },
     beforeDestroy() {

@@ -1,6 +1,7 @@
 <script>
 import Clock from "../components/Clock.vue"; // Adjust the path as needed
 import Weather from "../components/Weather.vue"
+import MusicPlayer from "../components/MusicPlayer.vue"
 
 export default {
   data(){
@@ -10,7 +11,8 @@ export default {
   },
   components: {
     Clock,
-    Weather
+    Weather,
+    MusicPlayer
   },
   methods: {
 
@@ -22,14 +24,16 @@ export default {
 </script>
 
 <template>
+  <div class="app">
   <Transition>
     <div v-if="show" class="parent-container">
       <Clock />
       <Weather class="weather"/>
+      <MusicPlayer class="music-player"/>
       <img draggable="false" src="../src/assets/tulips-bg.jpg" style="width:150px; height: 75px;">
     </div>
   </Transition>
-  
+    </div>
 </template>
 
 <style scoped>
@@ -37,6 +41,12 @@ export default {
   position: absolute;
   top: 0;
   left: 0;
+  padding: 12px;
+}
+.music-player {
+  position: absolute;
+  top: 0;
+  right: 0;
   padding: 12px;
 }
 .logo {
@@ -62,4 +72,10 @@ export default {
   opacity: 0;
 }
 
+</style>
+
+<style>
+html, body {
+  background-color: rgb(250, 250, 250) !important;
+}
 </style>
